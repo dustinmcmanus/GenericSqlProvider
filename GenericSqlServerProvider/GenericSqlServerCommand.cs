@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace GenericSqlServerProvider
 {
-    // Cannot derive from sealed type OracleConnection
     public class GenericSqlServerCommand : IDbCommand, IDisposable
     {
         private IDbCommand command;

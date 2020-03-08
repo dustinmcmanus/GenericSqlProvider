@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericOracleConnection", "GenericOracleConnection\GenericOracleConnection.csproj", "{43CD1223-D6F2-4552-A063-AC367B1D8CB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.Oracle", "GenericOracleConnection\GenericSqlProvider.Oracle.csproj", "{43CD1223-D6F2-4552-A063-AC367B1D8CB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlServerProvider", "GenericSqlServerProvider\GenericSqlServerProvider.csproj", "{0F64E936-46F1-4967-955E-A686D7DE647D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.SqlServer", "GenericSqlServerProvider\GenericSqlProvider.SqlServer.csproj", "{0F64E936-46F1-4967-955E-A686D7DE647D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider", "GenericSqlProvider\GenericSqlProvider.csproj", "{A01DD480-5232-4438-AD70-8633F94FDD47}"
 EndProject

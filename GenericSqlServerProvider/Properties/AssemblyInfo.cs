@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("GenericSqlServerProvider")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GenericSqlProvider.SqlServer")]
+[assembly: AssemblyDescription("SQL client for parameterized queries without vendor nuances.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GenericSqlServerProvider")]
+[assembly: AssemblyCompany("Dustin McManus")]
+[assembly: AssemblyProduct("GenericSqlProvider.SqlServer")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

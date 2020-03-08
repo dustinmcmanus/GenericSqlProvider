@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericOracleConnection
+namespace GenericSqlProvider
 {
     public class GenericOracleParameter : IDbDataParameter
     {

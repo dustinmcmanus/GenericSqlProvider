@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("GenericSqlProvider")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("SQL client for parameterized queries without vendor nuances.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dustin McManus")]
 [assembly: AssemblyProduct("GenericSqlProvider")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]

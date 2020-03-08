@@ -5,8 +5,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GenericSqlProvider;
 
-namespace GenericOracleConnection
+namespace GenericSqlProvider
 {
     // Cannot derive from sealed type OracleConnection
     public class GenericOracleCommand : IDbCommand, IDisposable
