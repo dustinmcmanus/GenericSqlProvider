@@ -1,0 +1,8 @@
+*.suo
+[Dd]ebug*/
+[Rr]elease*/
+*.vbproj.user
+obj/
+*.user
+[Bb]in*/
+.vs/
