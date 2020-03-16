@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.SqlServe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider", "GenericSqlProvider\GenericSqlProvider.csproj", "{A01DD480-5232-4438-AD70-8633F94FDD47}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.Examples", "GenericSqlProvider.Examples\GenericSqlProvider.Examples.csproj", "{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A01DD480-5232-4438-AD70-8633F94FDD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A01DD480-5232-4438-AD70-8633F94FDD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A01DD480-5232-4438-AD70-8633F94FDD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

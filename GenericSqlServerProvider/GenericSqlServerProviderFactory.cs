@@ -1,14 +1,6 @@
-﻿using GenericSqlProvider;
-using GenericSqlProvider;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
-namespace GenericSqlServerProvider
+namespace GenericSqlProvider.SqlServer
 {
     // CreateConnection is similar to System.Data.Common.DbProviderFactory usage
     public class GenericSqlServerProviderFactory : IDbProviderFactory

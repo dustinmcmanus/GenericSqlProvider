@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace GenericSqlServerProvider
+namespace GenericSqlProvider.SqlServer
 {
     // Cannot derive from sealed type OracleConnection
     public class GenericSqlServerConnection : IDbConnection, IDisposable

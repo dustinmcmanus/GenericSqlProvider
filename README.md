@@ -22,35 +22,73 @@ The following table summarizes these differences:
 ...Work in progress...
 ...for example if you are selecting the next value from a sequence or if you have a statement like SELECT CASE WHEN EXISTS [omitted details] THEN 1 ELSE 0 END)
 
-1. Parameterized queries (parameter name)
+### Parameterized queries (parameter name and SQL command text):
 
 **SQL Server**
 ```
-var results = new List<string>();
-using (SqlConnection connection = new SqlConnection(connectionString))
+using (IDbConnection connection = new SqlConnection(connectionString))
 {
     connection.Open();
-    using (IDbCommand cmd = connection.CreateCommand())
+    using (IDbCommand command = connection.CreateCommand())
     {
-        cmd.CommandText = "SELECT USERNAME FROM USER";
-        using (IDataReader rdr = cmd.ExecuteReader())
-        {
-            int username = rdr.GetOrdinal("USERNAME");
-            while (rdr.Read())
-            {
-                results.Add(rdr.GetString(username));
-            }
-        }
+        command.CommandText = @"INSERT INTO USERS (NAME) VALUES (@NAME)";
+        var param = command.CreateParameter();
+        param.ParameterName = "@NAME";
+        param.Value = "Bob";
+        command.Parameters.Add(param);
+        command.ExecuteNonQuery();
     }
 }
 ```
 
+**Oracle**
+```
+using (IDbConnection connection = new OracleConnection(connectionString))
+{
+    connection.Open();
+    using (IDbCommand command = connection.CreateCommand())
+    {
+        command.CommandText = @"INSERT INTO USERS (NAME) VALUES (:NAME)";
+        var param = command.CreateParameter();
+        param.ParameterName = "NAME";
+        param.Value = "Bob";
+        command.Parameters.Add(param);
+        command.ExecuteNonQuery();
+    }
+}
+```
+### FROM DUAL clause
+
+**SQL Server**
+```
+long sequenceValue;
+using (IDbConnection connection = new SqlConnection(connectionString))
+{
+    connection.Open();
+    using (IDbCommand command = connection.CreateCommand())
+    {
+        command.CommandText = "SELECT NEXT VALUE FOR USERS_SEQUENCE";
+        sequenceValue = Convert.ToInt64(command.ExecuteScalar());
+    }
+}
+```
 
 **Oracle**
 ```
-
+using (IDbConnection connection = new OracleConnection(connectionString))
+{
+    connection.Open();
+    using (IDbCommand command = connection.CreateCommand())
+    {
+        command.CommandText = @"INSERT INTO USERS (NAME) VALUES (:NAME)";
+        var param = command.CreateParameter();
+        param.ParameterName = "NAME";
+        param.Value = "Bob";
+        command.Parameters.Add(param);
+        command.ExecuteNonQuery();
+    }
+}
 ```
-
 
 ## The Solution
 ...work in progress
