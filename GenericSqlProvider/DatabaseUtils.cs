@@ -9,7 +9,7 @@ namespace GenericSqlProvider
             // look into extension methods
             var param = command.CreateParameter();
             param.ParameterName = parameterName;
-            param.Value = value;
+            param.Value = value ?? System.DBNull.Value;
             // Parameter is added during CreateParameter();
             //cmd.Parameters.Add(param);
         }

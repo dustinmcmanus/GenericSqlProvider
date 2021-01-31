@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Security;
 using System.Xml.Serialization;
 
 namespace GenericSqlProvider.Examples
@@ -15,7 +16,6 @@ namespace GenericSqlProvider.Examples
         private string _databasePort = "";
         private string _databaseName = "";
         private string _databaseUserName = "";
-        private string _databaseUserPassword = "";
 
         public DatabaseProviderInfo DatabaseProvider
         {
@@ -68,12 +68,7 @@ namespace GenericSqlProvider.Examples
         }
 
         [XmlIgnore]
-        public string DatabaseUserPassword
-        {
-            set { _databaseUserPassword = value; }
-            get { return _databaseUserPassword; }
-        }
-        
+        public string DatabaseUserPassword;        
                
         protected virtual void OnPropertyChanged(string strPropertyName)
         {

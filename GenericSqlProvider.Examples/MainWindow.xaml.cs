@@ -1,6 +1,8 @@
 ﻿using GenericSqlProvider.SqlServer;
 using System;
 using System.Collections.ObjectModel;
+using System.Data;
+using System.Security;
 using System.Windows;
 
 namespace GenericSqlProvider.Examples
@@ -24,12 +26,15 @@ namespace GenericSqlProvider.Examples
             GuiConfiguration = configManager.GetConfigurationRecord();
             this.DataContext = GuiConfiguration;
             PrepareComboBoxOptions();
+#if DEBUG
+            pwdDatabaseUserPassword.Password = "db";
+#endif
         }
 
         private void PrepareComboBoxOptions()
         {
             Providers = new ObservableCollection<DatabaseProviderInfo>();
-            Providers.Add(new DatabaseProviderInfo() { DisplayName="Oracle", InvariantName= "Oracle.ManagedDataAccess.Client" });
+            Providers.Add(new DatabaseProviderInfo() { DisplayName = "Oracle", InvariantName = "Oracle.ManagedDataAccess.Client" });
             Providers.Add(new DatabaseProviderInfo() { DisplayName = "SQL Server", InvariantName = "System.Data.SqlClient" });
             databaseProviderOptions = new ReadOnlyObservableCollection<DatabaseProviderInfo>(Providers);
             this.cboDatabaseProvider.ItemsSource = databaseProviderOptions;
@@ -38,19 +43,38 @@ namespace GenericSqlProvider.Examples
                 GuiConfiguration.DatabaseProvider = Providers[0];
             }
         }
-        
+
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            GuiConfiguration.DatabaseUserPassword = pwdDatabaseUserPassword.Password;
             ValidateForm();
             SaveConfiguration();
             string connectionString = GetConnectionString();
             var sqlProviderFactory = GetSqlProviderFactory(connectionString);
 
             // TODO: use provider factory in examples
+            using (IDbConnection connection = sqlProviderFactory.CreateConnection())
+            {
+                connection.Open();
+                using (IDbCommand command = connection.CreateCommand())
+                {
+                    command.CommandText = @"INSERT INTO USER_SETTING (SETTING_NAME, VALUE, USER_NAME) VALUES (@SETTING_NAME, @VALUE, @USER_NAME)";
+                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@SETTING_NAME", "FONT");
+                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@VALUE", "COURIER NEW");
+                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", null);
+                    //var param = command.CreateParameter();
+                    //param.ParameterName = "NAME";
+                    //param.Value = "Bob";
+                    //command.Parameters.Add(param);
+                    command.ExecuteNonQuery();
+                }
+            }
 
+
+            GuiConfiguration.DatabaseUserPassword = "";
             this.Close();
         }
-        
+
         private void ValidateForm()
         {
             try
