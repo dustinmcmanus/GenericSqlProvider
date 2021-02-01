@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace GenericSqlProvider
+namespace GenericSqlProvider.Oracle
 {
     // Cannot derive from sealed type OracleConnection
     public class GenericOracleConnection : IDbConnection, IDisposable

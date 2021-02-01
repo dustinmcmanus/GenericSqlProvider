@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace GenericSqlProvider
+namespace GenericSqlProvider.Oracle
 {
     // CreateConnection is similar to System.Data.Common.DbProviderFactory usage
     public class GenericOracleProviderFactory : IDbProviderFactory

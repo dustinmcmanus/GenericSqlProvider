@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Security;
 using System.Windows;
+using GenericSqlProvider.Configuration;
+using GenericSqlProvider.Oracle;
 
 namespace GenericSqlProvider.Examples
 {
@@ -13,7 +15,7 @@ namespace GenericSqlProvider.Examples
     public partial class MainWindow : Window
     {
         const string MainWindowSavedUserInputsFile = "ConfigurationRecord.xml";
-        ReadOnlyObservableCollection<DatabaseProviderInfo> databaseProviderOptions;
+        ReadOnlyObservableCollection<GenericSqlProvider.Configuration.DatabaseProviderInfo> databaseProviderOptions;
         ConfigurationRecord GuiConfiguration;
         ConfigurationLoader configManager = new ConfigurationLoader(MainWindowSavedUserInputsFile);
 

@@ -1,4 +1,4 @@
-﻿namespace GenericSqlProvider.Examples
+﻿namespace GenericSqlProvider.Configuration
 {
     public class DatabaseConnectionInfo
     {

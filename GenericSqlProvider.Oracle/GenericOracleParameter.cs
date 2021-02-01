@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace GenericSqlProvider
+namespace GenericSqlProvider.Oracle
 {
     public class GenericOracleParameter : IDbDataParameter
     {

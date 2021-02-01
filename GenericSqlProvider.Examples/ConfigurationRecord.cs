@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Security;
 using System.Xml.Serialization;
+using GenericSqlProvider.Configuration;
 
 namespace GenericSqlProvider.Examples
 {

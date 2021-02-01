@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenericSqlProvider.Examples
+namespace GenericSqlProvider.Configuration
 {
     public class DatabaseProviderInfo : IEquatable<DatabaseProviderInfo>
     {
