@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>GenericSqlProvider.Examples</RootNamespace>
     <AssemblyName>GenericSqlProvider.Examples</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -38,6 +38,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess, Version=2.0.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.Core.2.19.101\lib\netstandard2.0\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -90,6 +93,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,15 +108,15 @@
       <Name>GenericSqlProvider.Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj">
-      <Project>{43cd1223-d6f2-4552-a063-ac367b1d8cb5}</Project>
+      <Project>{46110a65-2a81-4d55-bc38-fbbb82e93516}</Project>
       <Name>GenericSqlProvider.Oracle</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericSqlProvider.SqlServer\GenericSqlProvider.SqlServer.csproj">
-      <Project>{0f64e936-46f1-4967-955e-a686d7de647d}</Project>
+      <Project>{0b99e6d7-b823-47aa-ab80-12ecac08d910}</Project>
       <Name>GenericSqlProvider.SqlServer</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericSqlProvider\GenericSqlProvider.csproj">
-      <Project>{a01dd480-5232-4438-ad70-8633f94fdd47}</Project>
+      <Project>{45baf039-b5cf-44df-a3ff-1a5f34fc697d}</Project>
       <Name>GenericSqlProvider</Name>
     </ProjectReference>
   </ItemGroup>
