@@ -1,6 +1,6 @@
 ﻿namespace GenericSqlProvider.Configuration
 {
-    public class DatabaseConnectionInfo
+    public class ConnectionConfiguration
     {
         public string HostName { get; set; }
         public string Port { get; set; }

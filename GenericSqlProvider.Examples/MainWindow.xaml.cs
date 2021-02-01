@@ -132,9 +132,9 @@ namespace GenericSqlProvider.Examples
             }
         }
 
-        private DatabaseConnectionInfo GetParametersForConnectionString()
+        private ConnectionConfiguration GetParametersForConnectionString()
         {
-            var connectionStringParams = new DatabaseConnectionInfo()
+            var connectionStringParams = new ConnectionConfiguration()
             {
                 HostName = GuiConfiguration.DatabaseHostName,
                 Port = GuiConfiguration.DatabasePort,

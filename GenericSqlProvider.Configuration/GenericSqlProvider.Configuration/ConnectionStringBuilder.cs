@@ -4,9 +4,9 @@ namespace GenericSqlProvider.Configuration
 {
     public class ConnectionStringBuilder
     {
-        private DatabaseConnectionInfo database;
+        private ConnectionConfiguration database;
 
-        public ConnectionStringBuilder(DatabaseConnectionInfo dbInfo)
+        public ConnectionStringBuilder(ConnectionConfiguration dbInfo)
         {
 
             if (string.IsNullOrWhiteSpace(dbInfo.HostName))
