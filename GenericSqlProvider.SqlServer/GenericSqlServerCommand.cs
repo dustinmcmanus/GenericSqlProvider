@@ -8,9 +8,10 @@ namespace GenericSqlProvider.SqlServer
     public class GenericSqlServerCommand : IDbCommand, IDisposable
     {
         private IDbCommand command;
-        private List<GenericSqlServerParameter> genericSqlServerParameters = new List<GenericSqlServerParameter>();
+        private IEnumerable<GenericSqlServerParameter> genericSqlServerParameters = new List<GenericSqlServerParameter>();
         //private IDbTransaction transaction; //TODO: set up automatic transactions
         IDataParameterCollection sqlServerParameterCollection = null;
+        IDataParameterCollection dummyParameterCollection = null;
 
         public GenericSqlServerCommand(IDbCommand sqlServerCommand)
         {
@@ -33,7 +34,7 @@ namespace GenericSqlProvider.SqlServer
         public int CommandTimeout { get => command.CommandTimeout; set => command.CommandTimeout = value; }
         public CommandType CommandType { get => command.CommandType; set => command.CommandType = value; }
 
-        public IDataParameterCollection Parameters => sqlServerParameterCollection;
+        public IDataParameterCollection Parameters => dummyParameterCollection;
 
         public UpdateRowSource UpdatedRowSource { get => command.UpdatedRowSource; set => command.UpdatedRowSource = value; }
 
@@ -48,6 +49,7 @@ namespace GenericSqlProvider.SqlServer
             if (sqlServerParameterCollection == null)
             {
                 sqlServerParameterCollection = command.Parameters;
+                dummyParameterCollection = new GenericSqlServerParameterCollection(ref sqlServerParameterCollection);
             }
             var genericParameter = new GenericSqlServerParameter(ref parameter);
             sqlServerParameterCollection.Add(parameter);

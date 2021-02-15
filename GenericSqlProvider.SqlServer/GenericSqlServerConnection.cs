@@ -68,7 +68,11 @@ namespace GenericSqlProvider.SqlServer
             {
                 if (disposing)
                 {
-                    // TODO: dispose transaction if exists and not already disposed?
+                    if (transaction != null)
+                    {
+                        // it does not matter if Dispose on the transaction is called more than once. Subsequent calls are ignored.
+                        transaction.Dispose();
+                    }
                     connection.Dispose();
                 }
 
