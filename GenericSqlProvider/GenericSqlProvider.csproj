@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj" />
+    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj" />
   </ItemGroup>
 
 </Project>

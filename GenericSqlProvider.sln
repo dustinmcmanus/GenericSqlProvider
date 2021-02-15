@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.Examples", "GenericSqlProvider.Examples\GenericSqlProvider.Examples.csproj", "{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Configuration", "GenericSqlProvider.Configuration\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj", "{9EE08B9D-E7C7-43D4-ADA2-14200CD6EBB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider", "GenericSqlProvider\GenericSqlProvider.csproj", "{45BAF039-B5CF-44DF-A3FF-1A5F34FC697D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider", "GenericSqlProvider\GenericSqlProvider.csproj", "{45BAF039-B5CF-44DF-A3FF-1A5F34FC697D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Oracle", "GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj", "{46110A65-2A81-4D55-BC38-FBBB82E93516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.Oracle", "GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj", "{46110A65-2A81-4D55-BC38-FBBB82E93516}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.SqlServer", "GenericSqlProvider.SqlServer\GenericSqlProvider.SqlServer.csproj", "{0B99E6D7-B823-47AA-AB80-12ECAC08D910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericSqlProvider.SqlServer", "GenericSqlProvider.SqlServer\GenericSqlProvider.SqlServer.csproj", "{0B99E6D7-B823-47AA-AB80-12ECAC08D910}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Configuration", "GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj", "{7DC58B20-D801-44FB-8374-3004E0E7BCB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3E137A5-993C-4EA2-A2AC-35D99DF62D06}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9EE08B9D-E7C7-43D4-ADA2-14200CD6EBB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EE08B9D-E7C7-43D4-ADA2-14200CD6EBB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EE08B9D-E7C7-43D4-ADA2-14200CD6EBB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EE08B9D-E7C7-43D4-ADA2-14200CD6EBB0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{45BAF039-B5CF-44DF-A3FF-1A5F34FC697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{45BAF039-B5CF-44DF-A3FF-1A5F34FC697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45BAF039-B5CF-44DF-A3FF-1A5F34FC697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{0B99E6D7-B823-47AA-AB80-12ECAC08D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B99E6D7-B823-47AA-AB80-12ECAC08D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B99E6D7-B823-47AA-AB80-12ECAC08D910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

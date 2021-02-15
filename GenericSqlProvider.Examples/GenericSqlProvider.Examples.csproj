@@ -106,8 +106,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj">
-      <Project>{9ee08b9d-e7c7-43d4-ada2-14200cd6ebb0}</Project>
+    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj">
+      <Project>{7dc58b20-d801-44fb-8374-3004e0e7bcb7}</Project>
       <Name>GenericSqlProvider.Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="..\GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj">
