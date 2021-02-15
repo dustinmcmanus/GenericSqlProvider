@@ -12,10 +12,4 @@
     <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="System.Data">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
