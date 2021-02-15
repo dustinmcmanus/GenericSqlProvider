@@ -8,9 +8,10 @@ namespace GenericSqlProvider.Oracle
     public class GenericOracleCommand : IDbCommand, IDisposable
     {
         private IDbCommand command;
-        private List<GenericOracleParameter> genericOracleParameters = new List<GenericOracleParameter>();
+        private IEnumerable<GenericOracleParameter> genericOracleParameters = new List<GenericOracleParameter>();
         //private IDbTransaction transaction;
         IDataParameterCollection oracleParameterCollection = null;
+        IDataParameterCollection dummyParameterCollection = null;
 
         public GenericOracleCommand(IDbCommand oracleCommand)
         {
@@ -33,7 +34,7 @@ namespace GenericSqlProvider.Oracle
         public int CommandTimeout { get => command.CommandTimeout; set => command.CommandTimeout = value; }
         public CommandType CommandType { get => command.CommandType; set => command.CommandType = value; }
 
-        public IDataParameterCollection Parameters => oracleParameterCollection;
+        public IDataParameterCollection Parameters => dummyParameterCollection;
 
         public UpdateRowSource UpdatedRowSource { get => command.UpdatedRowSource; set => command.UpdatedRowSource = value; }
 
@@ -48,6 +49,7 @@ namespace GenericSqlProvider.Oracle
             if (oracleParameterCollection == null)
             {
                 oracleParameterCollection = command.Parameters;
+                dummyParameterCollection = new GenericOracleParameterCollection(ref oracleParameterCollection);
             }
             var genericParameter = new GenericOracleParameter(ref parameter);
             oracleParameterCollection.Add(parameter);
