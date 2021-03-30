@@ -59,66 +59,55 @@ namespace GenericSqlProvider.Examples
             using (IDbConnection connection = sqlProviderFactory.CreateConnection())
             {
                 connection.Open();
+                //using (IDbCommand command = connection.CreateCommand())
+                //{
+                //    command.CommandText = @"INSERT INTO USER_SETTING (SETTING_NAME, VALUE, USER_NAME) VALUES (@SETTING_NAME, @VALUE, @USER_NAME)";
+                //    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@SETTING_NAME", "FONT");
+                //    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@VALUE", "COURIER NEW");
+                //    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", null);
+                //    //var param = command.CreateParameter();
+                //    //param.ParameterName = "NAME";
+                //    //param.Value = "Bob";
+                //    //command.Parameters.Add(param);
+                //    command.ExecuteNonQuery();
+                //}
+
+                var settingNameList = new List<string>();
                 using (IDbCommand command = connection.CreateCommand())
                 {
-                    command.CommandText = @"INSERT INTO USER_SETTING (SETTING_NAME, VALUE, USER_NAME) VALUES (@SETTING_NAME, @VALUE, @USER_NAME)";
-                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@SETTING_NAME", "FONT");
-                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@VALUE", "COURIER NEW");
-                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", null);
-                    //var param = command.CreateParameter();
-                    //param.ParameterName = "NAME";
-                    //param.Value = "Bob";
-                    //command.Parameters.Add(param);
-                    command.ExecuteNonQuery();
+                    command.CommandText = @"SELECT SETTING_NAME FROM USER_SETTING WHERE USER_NAME=@USER_NAME";
+
+                    //GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", "Jill");
+
+                    var param = command.CreateParameter();
+                    param.ParameterName = "@USER_NAME";
+                    param.Value = "Jill";
+                    command.Parameters.Add(param);
+
+                    using (IDataReader rdr = command.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            settingNameList.Add(rdr.GetString(0));
+                        }
+                    }
                 }
 
-
-                var tableGetter = new SqlToObject<UserSetting>(connection, null);
-                var records = tableGetter.GetRecordsWhere("SELECT SETTING_NAME, VALUE, USER_NAME FROM USER_SETTING");
-
-                foreach (UserSetting record in records)
+                using (IDbCommand command = connection.CreateCommand())
                 {
-                    System.Diagnostics.Debug.WriteLine(record.Value);
+                    command.CommandText = @"SELECT SETTING_NAME FROM USER_SETTING WHERE USER_NAME=@USER_NAME";
+
+                    GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", "Jill");
+
+                    using (IDataReader rdr = command.ExecuteReader())
+                    {
+                        while (rdr.Read())
+                        {
+                            settingNameList.Add(rdr.GetString(0));
+                        }
+                    }
                 }
-
-                //    var settingNameList = new List<string>();
-                //    using (IDbCommand command = connection.CreateCommand())
-                //    {
-                //        command.CommandText = @"SELECT SETTING_NAME FROM USER_SETTING WHERE USER_NAME=@USER_NAME";
-
-                //        //GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", "Jill");
-
-                //        var param = command.CreateParameter();
-                //        param.ParameterName = "@USER_NAME";
-                //        param.Value = "Jill";
-                //        command.Parameters.Add(param);
-
-                //        using (IDataReader rdr = command.ExecuteReader())
-                //        {
-                //            while (rdr.Read())
-                //            {
-                //                settingNameList.Add(rdr.GetString(0));
-                //            }
-                //        }
-                //    }
-
-                //    using (IDbCommand command = connection.CreateCommand())
-                //    {
-                //        command.CommandText = @"SELECT SETTING_NAME FROM USER_SETTING WHERE USER_NAME=@USER_NAME";
-
-                //        GenericSqlProvider.DatabaseUtils.AddParameter(command, "@USER_NAME", "Jill");
-
-                //        using (IDataReader rdr = command.ExecuteReader())
-                //        {
-                //            while (rdr.Read())
-                //            {
-                //                settingNameList.Add(rdr.GetString(0));
-                //            }
-                //        }
-                //    }
             }
-
-
 
 
             GuiConfiguration.DatabaseUserPassword = "";
@@ -192,6 +181,5 @@ namespace GenericSqlProvider.Examples
             };
             return connectionStringParams;
         }
-
     }
 }
