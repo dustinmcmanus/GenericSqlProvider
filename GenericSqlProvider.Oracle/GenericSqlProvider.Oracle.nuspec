@@ -10,8 +10,11 @@
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/dustinmcmanus/GenericSqlProvider</projectUrl>
     <description>$description$</description>
-    <releaseNotes>Initial release</releaseNotes>
-    <copyright>Copyright 2020</copyright>
+    <releaseNotes>Release 2</releaseNotes>
+    <copyright>Copyright 2021</copyright>
     <tags>Generic SQL Provider parameterized queries query Oracle ManagedDataAccess Client SQLServer server parameter connection DbProvider DbProviderFactory DbProviderFactories IDbProvider DI dependency injection RDMS database adapter</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
   </metadata>
 </package>
