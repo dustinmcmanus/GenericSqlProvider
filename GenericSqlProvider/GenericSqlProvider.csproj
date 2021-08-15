@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Description>SQL client for parameterized queries without vendor nuances.</Description>
     <PackageTags>Generic SQL Provider parameterized queries query Oracle ManagedDataAccess Client SQLServer server parameter connection DbProvider DbProviderFactory DbProviderFactories IDbProvider DI dependency injection RDMS database adapter configuration</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -10,15 +10,11 @@
     <PackageProjectUrl>https://github.com/dustinmcmanus/GenericSqlProvider</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dustinmcmanus/GenericSqlProvider</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
-    <PackageReleaseNotes>Release 2</PackageReleaseNotes>
+    <PackageReleaseNotes>Release 2.0.1</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,7 @@ namespace GenericSqlProvider.Configuration
 {
     public class DatabaseProviderInfo : IEquatable<DatabaseProviderInfo>
     {
+        public int IntegerValue { get; set; }
         public string InvariantName { get; set; }
         public string DisplayName { get; set; }
 

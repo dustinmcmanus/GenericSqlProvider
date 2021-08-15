@@ -36,10 +36,19 @@ namespace GenericSqlProvider.Examples
 
         private void PrepareComboBoxOptions()
         {
-            Providers = new ObservableCollection<DatabaseProviderInfo>();
-            Providers.Add(new DatabaseProviderInfo() { DisplayName = "Oracle", InvariantName = "Oracle.ManagedDataAccess.Client" });
-            Providers.Add(new DatabaseProviderInfo() { DisplayName = "SQL Server", InvariantName = "System.Data.SqlClient" });
-            databaseProviderOptions = new ReadOnlyObservableCollection<DatabaseProviderInfo>(Providers);
+            databaseProviderOptions = DatabaseProviders.GetSupportedProviders();
+            var providers2 = DatabaseProviders.GetSupportedProviders();
+            var providers3 = DatabaseProviders.GetSupportedProviders();
+
+            if (object.ReferenceEquals(providers2, providers3))
+            {
+                System.Diagnostics.Debug.WriteLine("same");
+                if (providers2.Contains(new DatabaseProviderInfo() { InvariantName = "Oracle.ManagedDataAccess.Client" })) {
+
+                    System.Diagnostics.Debug.WriteLine("same2");
+                }
+            }
+            //databaseProviderOptions = new ReadOnlyObservableCollection<DatabaseProviderInfo>(DatabaseProviders.GetSupportedProviders());
             this.cboDatabaseProvider.ItemsSource = databaseProviderOptions;
             if (GuiConfiguration.DatabaseProvider is null)
             {
@@ -144,16 +153,17 @@ namespace GenericSqlProvider.Examples
         {
             var connectionInfo = GetParametersForConnectionString();
             var connectionStringBuilder = new ConnectionStringBuilder(connectionInfo);
+            var str2 = connectionStringBuilder.GetConnectionString(GuiConfiguration.DatabaseProvider);
             return connectionStringBuilder.GetConnectionString(GuiConfiguration.DatabaseProvider.InvariantName);
         }
 
         private IDbProviderFactory GetSqlProviderFactory(string connectionString)
         {
-            switch (GuiConfiguration.DatabaseProvider.InvariantName)
+            switch (GuiConfiguration.DatabaseProvider.IntegerValue)
             {
-                case "Oracle.ManagedDataAccess.Client":
+                case (int)DatabaseProviderType.Oracle:
                     return new GenericOracleProviderFactory(connectionString);
-                case "System.Data.SqlClient":
+                case (int)DatabaseProviderType.SqlServer:
                     return new GenericSqlServerProviderFactory(connectionString);
                 default:
                     throw new NotImplementedException($"Generic SQL Providers for {GuiConfiguration.DatabaseProvider.InvariantName} are not supported yet.");

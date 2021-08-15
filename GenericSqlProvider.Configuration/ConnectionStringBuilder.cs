@@ -41,6 +41,19 @@ namespace GenericSqlProvider.Configuration
             database = dbInfo;
         }
 
+        public string GetConnectionString(DatabaseProviderInfo provider)
+        {
+            switch (provider.IntegerValue)
+            {
+                case (int)DatabaseProviderType.Oracle:
+                    return GetOracleConnectionString();
+                case (int)DatabaseProviderType.SqlServer:
+                    return GetSqlServerConnectionString();
+                default:
+                    throw new NotImplementedException($"Connection strings for {provider.InvariantName} are not supported yet");
+            }
+        }
+
         public string GetConnectionString(string providerInvariantName)
         {
             switch (providerInvariantName)
