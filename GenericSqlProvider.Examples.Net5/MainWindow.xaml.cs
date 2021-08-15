@@ -7,7 +7,10 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Windows;
 
-namespace GenericSqlProvider.Examples
+
+
+
+namespace GenericSqlProvider.Examples.Net5
 {
     public partial class MainWindow : Window
     {

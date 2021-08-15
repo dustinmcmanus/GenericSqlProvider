@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj" />
+    <ProjectReference Include="..\GenericSqlProvider.Examples.Common\GenericSqlProvider.Examples.Common.csproj" />
+    <ProjectReference Include="..\GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj" />
+    <ProjectReference Include="..\GenericSqlProvider.SqlServer\GenericSqlProvider.SqlServer.csproj" />
+    <ProjectReference Include="..\GenericSqlProvider\GenericSqlProvider.csproj" />
+  </ItemGroup>
+
+</Project>

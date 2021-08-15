@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Examples.Core", "GenericSqlProvider.Examples.Core\GenericSqlProvider.Examples.Core.csproj", "{F87A6D85-8B9A-4CB1-9132-012BB712287A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider", "GenericSqlProvider\GenericSqlProvider.csproj", "{26569C22-64C2-4B3C-AA81-FCD49F17F4CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Configuration", "GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj", "{EF4CB89B-8CFE-46F9-ABB4-F50A5C9A76C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Oracle", "GenericSqlProvider.Oracle\GenericSqlProvider.Oracle.csproj", "{6E417011-C9A6-497D-86BB-D4DB5BAD4165}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.SqlServer", "GenericSqlProvider.SqlServer\GenericSqlProvider.SqlServer.csproj", "{F2F0B494-58EA-43BE-A149-717598726B5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Examples.Common", "GenericSqlProvider.Examples.Common\GenericSqlProvider.Examples.Common.csproj", "{C370260F-8B32-467F-A31D-618B72E411AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F87A6D85-8B9A-4CB1-9132-012BB712287A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87A6D85-8B9A-4CB1-9132-012BB712287A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87A6D85-8B9A-4CB1-9132-012BB712287A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87A6D85-8B9A-4CB1-9132-012BB712287A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26569C22-64C2-4B3C-AA81-FCD49F17F4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26569C22-64C2-4B3C-AA81-FCD49F17F4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26569C22-64C2-4B3C-AA81-FCD49F17F4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26569C22-64C2-4B3C-AA81-FCD49F17F4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF4CB89B-8CFE-46F9-ABB4-F50A5C9A76C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF4CB89B-8CFE-46F9-ABB4-F50A5C9A76C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF4CB89B-8CFE-46F9-ABB4-F50A5C9A76C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF4CB89B-8CFE-46F9-ABB4-F50A5C9A76C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E417011-C9A6-497D-86BB-D4DB5BAD4165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E417011-C9A6-497D-86BB-D4DB5BAD4165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E417011-C9A6-497D-86BB-D4DB5BAD4165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E417011-C9A6-497D-86BB-D4DB5BAD4165}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F0B494-58EA-43BE-A149-717598726B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F0B494-58EA-43BE-A149-717598726B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F0B494-58EA-43BE-A149-717598726B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F0B494-58EA-43BE-A149-717598726B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C370260F-8B32-467F-A31D-618B72E411AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C370260F-8B32-467F-A31D-618B72E411AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C370260F-8B32-467F-A31D-618B72E411AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C370260F-8B32-467F-A31D-618B72E411AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9FD49F4-A38C-41AD-8291-70F9EAF23E44}
+	EndGlobalSection
+EndGlobal

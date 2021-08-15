@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net461;</TargetFrameworks>
     <Version>2.0.1</Version>
     <Description>Oracle database module for GenericSqlProvider.</Description>
     <PackageProjectUrl>https://github.com/dustinmcmanus/GenericSqlProvider</PackageProjectUrl>
@@ -13,11 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="oracle.manageddataaccess.core" Version="2.*" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="[12.1.21,21)" Condition="'$(TargetFramework)' == 'net461'" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.*" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\GenericSqlProvider\GenericSqlProvider.csproj" />
   </ItemGroup>
-
+  
 </Project>

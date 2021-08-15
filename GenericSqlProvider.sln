@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.SqlServe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Configuration", "GenericSqlProvider.Configuration\GenericSqlProvider.Configuration.csproj", "{7DC58B20-D801-44FB-8374-3004E0E7BCB7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericSqlProvider.Examples.Common", "GenericSqlProvider.Examples.Common\GenericSqlProvider.Examples.Common.csproj", "{EB6E2AF2-E601-417D-9E52-1426481BADA2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DC58B20-D801-44FB-8374-3004E0E7BCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB6E2AF2-E601-417D-9E52-1426481BADA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB6E2AF2-E601-417D-9E52-1426481BADA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB6E2AF2-E601-417D-9E52-1426481BADA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB6E2AF2-E601-417D-9E52-1426481BADA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
