@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <Version>2.0.1</Version>
+    <Version>3.0.0</Version>
     <Description>SQL Server database module for GenericSqlProvider.</Description>
     <Copyright>2021</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -10,7 +10,7 @@
     <RepositoryUrl>https://github.com/dustinmcmanus/GenericSqlProvider</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>Generic SQL Provider parameterized queries query Oracle ManagedDataAccess Client SQLServer server parameter connection DbProvider DbProviderFactory DbProviderFactories IDbProvider DI dependency injection RDMS database adapter configuration</PackageTags>
-    <PackageReleaseNotes>Release 2.0.1</PackageReleaseNotes>
+    <PackageReleaseNotes>Release 3.0.0 - Migrated from System.Data.SqlClient to Microsoft.Data.SqlClient</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

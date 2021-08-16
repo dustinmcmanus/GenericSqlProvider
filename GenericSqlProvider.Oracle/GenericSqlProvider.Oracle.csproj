@@ -2,21 +2,21 @@
 
   <PropertyGroup>
     <TargetFrameworks>net461;net462;netstandard2.0;netstandard2.1;</TargetFrameworks>
-    <Version>2.0.1</Version>
+    <Version>3.0.1</Version>
     <Description>Oracle database module for GenericSqlProvider.</Description>
     <PackageProjectUrl>https://github.com/dustinmcmanus/GenericSqlProvider</PackageProjectUrl>
     <RepositoryUrl>https://github.com/dustinmcmanus/GenericSqlProvider</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>2021</Copyright>
     <PackageTags>Generic SQL Provider parameterized queries query Oracle ManagedDataAccess Client SQLServer server parameter connection DbProvider DbProviderFactory DbProviderFactories IDbProvider DI dependency injection RDMS database adapter configuration</PackageTags>
-    <PackageReleaseNotes>Release 2.0.1</PackageReleaseNotes>
+    <PackageReleaseNotes>Release 3.0.1 - Fixed Oracle dependencies</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Oracle.ManagedDataAccess" Version="[12.1.21,21)" Condition="'$(TargetFramework)' == 'net461'" />
-    <PackageReference Include="Oracle.ManagedDataAccess" Version="21.*" Condition="'$(TargetFramework)' == 'net462'" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="*" Condition="'$(TargetFramework)' == 'net462'" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.*" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
-    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.*" Condition="'$(TargetFramework)' == 'netstandard2.1'" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="*" Condition="'$(TargetFramework)' == 'netstandard2.1'" />
   </ItemGroup>
 
   <ItemGroup>
