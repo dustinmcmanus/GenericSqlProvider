@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net461;net462;netstandard2.0;netstandard2.1;</TargetFrameworks>
@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Oracle.ManagedDataAccess" Version="[12.1.21,21)" Condition="'$(TargetFramework)' == 'net461'" />
-    <PackageReference Include="Oracle.ManagedDataAccess" Version="12.1.21" Condition="'$(TargetFramework)' == 'net462'" />
+    <PackageReference Include="Oracle.ManagedDataAccess" Version="21.9.0" Condition="'$(TargetFramework)' == 'net462'" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="[2.18.3,3)" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
     <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.18.3" Condition="'$(TargetFramework)' == 'netstandard2.1'" />
   </ItemGroup>
